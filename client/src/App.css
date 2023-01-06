@@ -14,7 +14,7 @@ body {
   width: min(100vw, 1440px);
   max-width: 100%;
   margin: 0 auto 0 auto;
-  background: linear-gradient(45deg, #fff1e6, #f0efeb);
+  background-color: #FCFFE7;
 }
 .btn {
   width: 20rem;
@@ -41,4 +41,21 @@ body {
 .btn-cat:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+  html{
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width:550px) {
+  html{
+    font-size: 50%;
+  }
 }

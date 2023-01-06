@@ -34,6 +34,11 @@
       gap: 2rem;
       box-shadow: 0.1rem 0.1rem 1rem 0rem #352b2b;
       position: relative;
+      transform: scale(1);
+      transition: .5s;
+      &:hover{
+        transform: scale(.9);
+      }
       .image {
         width: 100%;
         height: 20rem;

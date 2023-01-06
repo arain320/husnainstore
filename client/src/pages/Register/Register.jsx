@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useFormik } from "formik";
 import { singUpSchema } from "../../Schema/Schema";
+import axios from "axios";
 import Header from "../../components/Header/Header";
 
 const initialValues = {
@@ -28,6 +29,12 @@ const Register = () => {
       validationSchema: singUpSchema,
       onSubmit: (values, action) => {
         console.log(values);
+             const res = axios.post("http://localhost:5000/api/register",values,{
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        console.log(res);
         action.resetForm();
       },
     });

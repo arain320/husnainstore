@@ -4,8 +4,11 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const productRouter = require("./routes/productRoute");
+const userRouter = require("./routes/userRouter");
+const errorMessage = require("./middleWare/error");
 
 const app = express();
+app.use(errorMessage);
 const PORT = process.env.PORT || 5000;
 
 //Middleware
@@ -16,6 +19,7 @@ app.use(cors());
 
 //Routes middleware
 app.use("/api", productRouter);
+app.use("/api", userRouter);
 
 //connect to mongo DB
 mongoose
